@@ -1,0 +1,43 @@
+/* The house shell: one or two rooms, and the player bar that keeps sound going */
+html, body.shell-page { height: 100%; overflow: hidden; }
+.shell-page { display: flex; flex-direction: column; background: #0f1524; }
+.panes { flex: 1 1 auto; display: flex; min-height: 0; }
+.pane { position: relative; flex: 1 1 0; min-width: 0; }
+.pane + .pane { border-left: 1px solid rgba(232,227,211,.35); }
+.pane iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #0f1524; }
+
+.player { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; min-height: 58px; padding: 6px max(12px, env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  background: #0b101c; border-top: 1px solid rgba(232,227,211,.3); color: #e8e3d3; font-family: 'Fell', Georgia, serif; }
+.pl-main { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; border: 0; background: #e8e3d3; color: #0f1524; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
+.pl-main.start { background: #f2b45a; }
+.pl-what { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 10px; }
+.pl-g { color: #f2b45a; display: flex; }
+.pl-text { min-width: 0; }
+.pl-title { font-size: 17px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pl-title.ar { font-family: 'Kufi', sans-serif; font-size: 15px; }
+.pl-sub { font-family: 'Fell SC', serif; font-size: 12px; letter-spacing: .1em; color: #a8a493; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pl-btn { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 10px; border: 1px solid rgba(232,227,211,.35); background: transparent; color: #e8e3d3; font-family: 'Fell SC', serif; font-size: 13px; letter-spacing: .06em; cursor: pointer; }
+.pl-btn.icon { width: 40px; justify-content: center; padding: 0; border-color: transparent; color: #a8a493; }
+.pl-btn[aria-pressed="true"] { background: #e8e3d3; color: #0f1524; }
+.pl-vol { display: none; align-items: center; gap: 6px; color: #a8a493; }
+.pl-vol input { width: 110px; accent-color: #f2b45a; }
+[data-pl-split] { display: none; }
+@media (min-width: 900px) {
+  .pl-vol { display: flex; }
+  [data-pl-split] { display: inline-flex; }
+}
+@media (max-width: 420px) {
+  .pl-btn span { display: none; }
+  .pl-btn:not(.icon) { width: 40px; justify-content: center; padding: 0; }
+}
+
+/* sleeping: only the dim room shows */
+.dim[data-dim="a"] .pane[data-pane="b"], .dim[data-dim="b"] .pane[data-pane="a"] { display: none; }
+.dim .pane + .pane { border-left: 0; }
+
+.pl-btn.icon[data-pl-amb] { border-color: transparent; }
+.pl-btn.icon[data-pl-amb][aria-pressed="true"] { background: transparent; color: #f2b45a; }
+.pl-btn.icon[data-pl-amb][aria-pressed="false"] { color: #6f6c62; }
+.pl-btn.icon[data-pl-amb][aria-pressed="false"]::after { content: ''; position: absolute; width: 22px; height: 1.5px; background: currentColor; transform: rotate(-45deg); }
+.pl-btn { position: relative; }
+.fs .player { display: none !important; }

@@ -1,0 +1,79 @@
+/* Quiet Room — dim, soft, almost empty */
+.room-quiet .room-title { font-weight: 500; }
+.q-title { margin: 20px 0 0; text-align: center; font-weight: 300; font-style: italic; font-size: 31px; line-height: 1.15; }
+.q-sub { text-align: center; font-style: italic; font-size: 17px; color: var(--muted); margin: 10px 0 0; }
+.q-row { display: flex; justify-content: center; gap: 12px; margin-top: 18px; }
+.q-btn { min-width: 150px; min-height: 48px; padding: 0 22px; border: 1px solid var(--line-strong); border-radius: 24px; background: transparent; color: var(--ink); font-family: 'Cormorant', serif; font-size: 20px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.q-btn:hover { background: rgba(220,216,204,.06); }
+.q-btn.ghost { border-color: transparent; color: var(--muted); }
+.q-pill { display: flex; align-items: center; justify-content: center; gap: 10px; width: fit-content; margin: 22px auto 0; min-height: 46px; padding: 0 18px; border: 1px solid var(--line-strong); border-radius: 23px; font-size: 18px; text-decoration: none; }
+.q-fine { display: flex; justify-content: center; align-items: center; gap: 8px; font-style: italic; font-size: 15px; color: var(--muted); margin: 16px 0 0; }
+
+.breath { position: relative; width: min(300px, 78vw); aspect-ratio: 1; margin: 18px auto 0; }
+.breath .ring { position: absolute; border-radius: 50%; }
+.breath .r1 { inset: 0; background: rgba(143,154,134,.07); }
+.breath .r2 { inset: 11%; background: rgba(143,154,134,.1); }
+.breath .r3 { inset: 22%; background: rgba(143,154,134,.16); border: 1px solid rgba(220,216,204,.18); transform: scale(.72); }
+.breath-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; }
+.phase { font-style: italic; font-size: 32px; }
+.count { font-weight: 500; font-size: 14px; letter-spacing: .3em; color: var(--muted); min-height: 18px; }
+.patterns { display: flex; justify-content: center; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.patterns button { min-height: 40px; padding: 0 14px; border: 1px solid var(--line); border-radius: 20px; background: transparent; color: var(--muted); font-family: 'Cormorant', serif; font-size: 17px; cursor: pointer; }
+.patterns button[aria-pressed="true"] { border-color: var(--line-strong); color: var(--ink); }
+
+.ground { margin: 26px auto 0; max-width: 420px; text-align: center; min-height: 250px; }
+.ground .num { font-weight: 300; font-size: 96px; line-height: 1; }
+.ground .what { font-style: italic; font-size: 26px; margin-top: 4px; }
+.ground .how { color: var(--muted); font-size: 17px; margin-top: 8px; font-style: italic; }
+.ground .dots { display: flex; justify-content: center; gap: 12px; margin-top: 22px; }
+.ground .dots button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-strong); background: transparent; cursor: pointer; }
+.ground .dots button[aria-pressed="true"] { background: rgba(220,216,204,.75); }
+.ground .end { font-style: italic; font-size: 28px; padding-top: 50px; }
+
+.burn-box { position: relative; margin: 20px 0 0; }
+.burn-box textarea { width: 100%; min-height: 230px; resize: vertical; border: 1px solid var(--line); border-radius: 4px; background: rgba(220,216,204,.03); color: var(--ink); font-family: 'Cormorant', serif; font-style: italic; font-size: 22px; line-height: 1.35; padding: 16px; }
+.burn-box textarea::placeholder { color: #6f7168; }
+.burn-box canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+
+.bell-face { width: min(240px, 64vw); aspect-ratio: 1; margin: 24px auto 0; border-radius: 50%; border: 1px solid var(--line-strong); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; background: rgba(143,154,134,.08); transition: box-shadow 1.5s; }
+.bell-face.ring { box-shadow: 0 0 0 18px rgba(220,216,204,.06), 0 0 0 36px rgba(220,216,204,.03); }
+.bell-left { font-weight: 300; font-size: 58px; font-variant-numeric: tabular-nums; }
+.ol-form { display: flex; flex-direction: column; gap: 14px; margin: 22px auto 0; max-width: 520px; align-items: center; }
+.ol-form input { width: 100%; height: 52px; border: 0; border-bottom: 1px solid var(--line-strong); background: transparent; color: var(--ink); font-family: 'Cormorant', serif; font-style: italic; font-size: 24px; text-align: center; }
+.ol-form input::placeholder { color: #6f7168; }
+.ol-ago { max-width: 520px; margin: 26px auto 0; text-align: center; font-style: italic; font-size: 19px; border: 1px solid var(--line); padding: 14px; }
+.ol-ago small { display: block; font-style: normal; font-weight: 500; font-size: 12px; letter-spacing: .26em; color: var(--muted); margin-bottom: 6px; }
+.ol-list { list-style: none; max-width: 520px; margin: 26px auto 0; padding: 0; }
+.ol-list li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 18px; }
+.ol-list li span { font-weight: 500; font-size: 12px; letter-spacing: .18em; color: var(--muted); padding-top: 5px; }
+
+/* ───────── sleep ───────── */
+.sl-set { max-width: 520px; margin: 22px auto 0; }
+.sl-lbl { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 22px 0 0; font-weight: 500; font-size: 13px; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); }
+.sl-set .patterns { margin-top: 10px; }
+.sl-wake { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 10px; }
+.sl-switch { position: relative; width: 56px; height: 32px; border-radius: 16px; border: 1px solid var(--line-strong); background: transparent; cursor: pointer; padding: 0; }
+.sl-switch span { position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: var(--muted); transition: transform .25s, background .25s; }
+.sl-switch[aria-checked="true"] { background: rgba(220,216,204,.14); }
+.sl-switch[aria-checked="true"] span { transform: translateX(24px); background: var(--ink); }
+.sl-wake input[type="time"] { color-scheme: dark; height: 50px; border: 0; border-bottom: 1px solid var(--line-strong); background: transparent; color: var(--ink); font-family: 'Cormorant', serif; font-size: 30px; text-align: center; padding: 0 4px; }
+.sl-wake input:disabled { opacity: .35; }
+.sl-when { min-width: 92px; font-style: italic; font-size: 17px; color: var(--muted); }
+.sl-fine { max-width: 420px; margin-left: auto; margin-right: auto; text-align: left; align-items: flex-start; }
+.sl-fine .glyph { margin-top: 3px; }
+
+.night { position: fixed; inset: 0; z-index: 200; background: #000; cursor: none; user-select: none; -webkit-user-select: none; }
+.night-sky { position: absolute; inset: 0; background: #000; transition: background 1s linear; }
+.night-clock { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: rgba(128,28,18,.6); transition: transform 3s ease, color 1s linear; }
+.nc-time { white-space: nowrap; font-family: 'Cormorant', serif; font-weight: 300; font-size: min(28vw, 34vh, 240px); line-height: 1; font-variant-numeric: lining-nums tabular-nums; letter-spacing: -.01em; }
+.nc-sub { margin-top: 10px; font-family: 'Cormorant', serif; font-weight: 500; font-size: 13px; letter-spacing: .26em; text-transform: uppercase; opacity: .7; }
+.night-ctl { position: absolute; left: 0; right: 0; bottom: calc(28px + env(safe-area-inset-bottom)); display: flex; justify-content: center; gap: 12px; opacity: 0; transition: opacity .6s; pointer-events: none; }
+.night-ctl.on { opacity: 1; pointer-events: auto; cursor: default; }
+.nb { min-height: 50px; padding: 0 22px; border: 1px solid rgba(150,44,30,.55); border-radius: 25px; background: rgba(0,0,0,.25); color: rgba(170,60,40,.9); font-family: 'Cormorant', serif; font-size: 20px; cursor: pointer; }
+.morning { position: absolute; left: 0; right: 0; top: 16%; text-align: center; color: #3c1a0a; }
+.m-hello { font-family: 'Cormorant', serif; font-style: italic; font-weight: 300; font-size: clamp(40px, 10vw, 64px); }
+.m-day { font-family: 'Cormorant', serif; font-weight: 500; font-size: 14px; letter-spacing: .24em; text-transform: uppercase; margin-top: 6px; }
+.morning ~ .night-ctl .nb, .night-ctl .nb { backdrop-filter: blur(2px); }
+.nc-time small { font-size: .22em; font-weight: 500; letter-spacing: .1em; margin-left: .2em; text-transform: uppercase; }
+.night.day .nb { color: #3c1a0a; border-color: rgba(60,26,10,.45); background: rgba(255,250,235,.3); }
+.night.day .night-ctl { opacity: 1; pointer-events: auto; }

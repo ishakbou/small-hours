@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Small Hours</title>
+<meta name="description" content="A house for the late part of the night: the real sky, real sounds and scenes, calm, stories read aloud, study, prayer times and small gifts. Free, private, works offline.">
+<meta name="theme-color" content="#0f1524">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="css/house.css">
+<link rel="stylesheet" href="css/home.css">
+<script src="js/vendor/astronomy.min.js"></script>
+</head>
+<body class="room-house home">
+<div class="home-wrap">
+
+<section class="stage" aria-label="The house">
+  <svg class="stars" width="390" height="600" viewBox="0 0 390 600" aria-hidden="true">
+    <g fill="#e8e3d3">
+      <circle cx="22" cy="18" r="0.8" opacity="0.7"/><circle cx="64" cy="44" r="1.1" opacity="0.6"/><circle cx="118" cy="22" r="0.7" opacity="0.5"/>
+      <circle cx="171" cy="58" r="1.3" opacity="0.8" class="tw"/><circle cx="232" cy="30" r="0.9" opacity="0.6"/><circle cx="262" cy="160" r="0.8" opacity="0.5"/>
+      <circle cx="372" cy="22" r="1" opacity="0.7"/><circle cx="352" cy="176" r="1.4" opacity="0.8" class="tw tw2"/><circle cx="308" cy="214" r="0.7" opacity="0.5"/>
+      <circle cx="246" cy="196" r="1.1" opacity="0.7"/><circle cx="376" cy="248" r="0.8" opacity="0.6"/>
+      <circle cx="18" cy="262" r="1" opacity="0.6"/><circle cx="12" cy="352" r="0.7" opacity="0.5"/><circle cx="374" cy="330" r="1" opacity="0.6" class="tw tw3"/>
+      <circle cx="34" cy="410" r="1.2" opacity="0.7"/><circle cx="360" cy="420" r="0.8" opacity="0.5"/><circle cx="42" cy="500" r="0.7" opacity="0.4"/>
+      <circle cx="352" cy="512" r="1.1" opacity="0.6"/><circle cx="290" cy="262" r="0.9" opacity="0.6"/><circle cx="84" cy="292" r="0.8" opacity="0.5"/>
+      <circle cx="330" cy="140" r="0.7" opacity="0.5"/>
+    </g>
+    <polyline points="30,214 58,236 86,216 112,240 140,220" fill="none" stroke="#e8e3d3" stroke-width="0.6" opacity="0.28"/>
+    <g fill="#e8e3d3"><circle cx="30" cy="214" r="1.7"/><circle cx="58" cy="236" r="1.5"/><circle cx="86" cy="216" r="1.9"/><circle cx="112" cy="240" r="1.4"/><circle cx="140" cy="220" r="1.6"/></g>
+    <text x="40" y="258" font-family="Fell, serif" font-style="italic" font-size="10" fill="#a8a493">Cassiopeia</text>
+  </svg>
+
+  <a class="moon-slot" href="roof.html#moon" data-moon aria-label="Tonight's moon"></a>
+
+  <header class="home-head">
+    <div class="brand"><i data-glyph="house" data-size="16"></i>SMALL HOURS</div>
+    <h1>A house for the late part of the night.</h1>
+    <div class="today"><i data-glyph="moon" data-size="14"></i><span data-today>Tonight</span></div>
+  </header>
+
+  <nav class="home-links" aria-label="House">
+    <a href="plan.html"><i data-glyph="plan" data-size="17"></i>Plan of the house</a>
+    <a href="install.html"><i data-glyph="install" data-size="17"></i>Install</a>
+  </nav>
+
+  <svg class="house" width="390" height="380" viewBox="-65 0 390 380" aria-hidden="true">
+    <!-- the library wing -->
+    <g fill="none" stroke="#e8e3d3" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round">
+      <polygon points="30,262 -56,294 -56,370 30,370" fill="#0f1524"/>
+      <path d="M30 258 L-62 293"/>
+    </g>
+    <path class="win w2" d="M-46 344 V322 A20 20 0 0 1 -6 322 V344 Z" fill="#e6c46e"/>
+    <g class="books">
+      <rect x="-43" y="306" width="4" height="15" fill="#24533e"/><rect x="-38" y="309" width="5" height="12" fill="#5e1f22"/><rect x="-32" y="305" width="4" height="16" fill="#1f2c4a"/>
+      <rect x="-27" y="308" width="3" height="13" fill="#8a6526"/><rect x="-22" y="303" width="5" height="18" fill="#452547"/><rect x="-15" y="309" width="4" height="12" fill="#24533e"/><rect x="-10" y="307" width="3" height="14" fill="#5e1f22"/>
+      <rect x="-45" y="329" width="5" height="15" fill="#1f2c4a"/><rect x="-39" y="332" width="4" height="12" fill="#8a6526"/><rect x="-34" y="328" width="4" height="16" fill="#24533e"/>
+      <polygon points="-29,344 -26,330 -22,331 -25,344" fill="#5e1f22"/><rect x="-20" y="331" width="5" height="13" fill="#452547"/><rect x="-14" y="329" width="4" height="15" fill="#1f2c4a"/>
+    </g>
+    <g fill="none" stroke="#e8e3d3" stroke-width="1.4">
+      <path d="M-46 344 V322 A20 20 0 0 1 -6 322 V344 Z"/><line x1="-46" y1="322" x2="-6" y2="322"/><line x1="-50" y1="348" x2="-2" y2="348"/>
+    </g>
+    <!-- the courtyard -->
+    <g fill="none" stroke="#e8e3d3" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <g class="palm" transform="translate(-13 0)" fill="#0f1524" stroke="#e8e3d3" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M300.5 301 C 299 285 301 267 306.5 249 L 311 250 C 306 267 304.5 285 305.5 301 Z"/>
+        <path d="M300.4 294 l5 -1.2 M300.2 287 l5 -1.2 M300.6 280 l5 -1.2 M301.4 273 l5 -1.2 M302.4 266 l5 -1.2 M303.8 259 l5 -1.2" fill="none" stroke-width=".9" opacity=".7"/>
+        <path d="M309 247 C 298.0 235.0 286.0 238.0 280 260 C 290.1 259.4 300.3 250.0 309 249 Z"/><path d="M309 247 C 320.0 235.0 331.0 239.0 336 259 C 326.6 258.8 317.1 250.0 309 249 Z"/><path d="M309 247 C 302.0 235.0 294.0 228.0 287 232 C 294.7 241.2 302.4 250.0 309 249 Z"/><path d="M309 247 C 316.0 233.0 325.0 227.0 331 231 C 323.3 240.6 315.6 250.0 309 249 Z"/><path d="M309 247 C 307.0 236.0 309.0 227.0 313 221 C 311.6 234.1 310.2 250.0 309 249 Z"/><path d="M309 247 C 304.0 248.0 298.0 252.0 296 268 C 300.6 264.6 305.1 250.0 309 249 Z"/>
+        <path d="M299.0 240.4 L301.3 248.4 M294.2 240.3 L296.8 249.7 M289.6 242.5 L292.4 252.0 M285.5 247.0 L288.0 255.0 M282.4 252.9 L284.4 258.0 M318.7 240.5 L316.3 248.4 M323.3 240.5 L320.5 249.7 M327.5 242.7 L324.6 251.8 M331.2 247.0 L328.6 254.6 M334.0 252.5 L332.0 257.4 M302.5 237.7 L303.5 245.7 M299.1 234.4 L300.2 243.3 M295.8 232.1 L296.9 240.7 M292.4 231.0 L293.5 238.2 M289.6 231.0 L290.6 236.0 M315.7 236.6 L314.5 245.3 M319.2 233.1 L317.9 242.7 M322.7 230.9 L321.3 240.0 M326.0 229.8 L324.6 237.4 M328.7 230.0 L327.5 235.2 M308.2 237.7 L309.3 245.0 M308.5 233.5 L309.8 241.3 M309.3 229.6 L310.5 236.9 M310.4 226.0 L311.2 232.0 M311.6 223.3 L312.0 227.7 M304.4 249.0 L305.5 252.0 M302.1 251.0 L303.5 254.7 M300.0 254.0 L301.4 258.2 M298.2 258.1 L299.5 262.1 M296.9 262.7 L297.9 265.6" fill="none" stroke-width=".8" opacity=".75"/>
+        <circle cx="306" cy="252" r="2.2"/><circle cx="310.5" cy="253" r="2.2"/><circle cx="308" cy="255.5" r="2.2"/>
+      </g>
+      <path d="M232 370 V300 h7 v-5 h7 v5 h7 v-5 h7 v5 h7 v-5 h7 v5 h7 v-5 h7 v5 h7 v-5 h7 v5 h7 v-5 h7 v5 h7 V370" fill="#0f1524"/>
+    </g>
+    <defs><radialGradient id="court-glow" cx=".5" cy=".85" r=".8"><stop offset="0" stop-color="#f5d58a"/><stop offset=".6" stop-color="#e2a24f"/><stop offset="1" stop-color="#9c6a34"/></radialGradient></defs>
+    <path class="win w3" d="M258 370 V344 A20 20 0 1 1 292 344 V370 Z" fill="url(#court-glow)"/>
+    <g fill="none" stroke="#0f1524" stroke-width="1.6" stroke-linecap="round">
+      <path d="M265 366 Q275 371 285 366"/><path d="M275 366 V352 M275 352 C 271 349 269 352 268 356 M275 352 C 279 349 281 352 282 356"/>
+    </g>
+    <g fill="none" stroke="#e8e3d3" stroke-width="1.4">
+      <path d="M258 370 V344 A20 20 0 1 1 292 344 V370"/>
+      <path d="M240 308 l3 -3 l3 3 l-3 3 Z M302 308 l3 -3 l3 3 l-3 3 Z" stroke-width="1"/>
+      <path d="M-65 370 L325 370"/>
+    </g>
+    <g fill="none" stroke="#e8e3d3" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round">
+      <path class="smoke" d="M186 44 C 190 34, 182 28, 188 18 S 196 6, 192 -4" stroke-dasharray="2 4" opacity="0.6"/>
+      <polygon points="175,48 195,48 195,95 175,75" fill="#0f1524"/>
+      <line x1="112" y1="58" x2="80" y2="22" stroke-width="7"/>
+      <line x1="112" y1="58" x2="80" y2="22" stroke="#0f1524" stroke-width="4"/>
+      <line x1="84" y1="20" x2="78" y2="26" stroke-width="2"/>
+      <polygon points="10,150 130,30 250,150" fill="#0f1524"/>
+      <line x1="90" y1="70" x2="170" y2="70" stroke-dasharray="3 3" opacity="0.5"/>
+      <line x1="65" y1="95" x2="195" y2="95" stroke-dasharray="3 3" opacity="0.5"/>
+      <line x1="40" y1="120" x2="220" y2="120" stroke-dasharray="3 3" opacity="0.5"/>
+      <rect x="30" y="150" width="200" height="220" fill="#0f1524"/>
+      <line x1="30" y1="268" x2="230" y2="268" opacity="0.4"/>
+    </g>
+    <circle class="win" cx="130" cy="108" r="18" fill="#e9dcae"/>
+    <rect class="win" x="55" y="180" width="50" height="62" fill="#f2b45a"/>
+    <rect class="win w2" x="155" y="180" width="50" height="62" fill="#b98f4d"/>
+    <rect class="win w3" x="50" y="290" width="70" height="55" fill="#f5d58a"/>
+    <rect x="152" y="365" width="41" height="4" fill="#f2b45a"/>
+    <rect x="160" y="295" width="25" height="14" fill="#e3c27e"/>
+    <g stroke="#0f1524" stroke-width="2.5">
+      <line x1="130" y1="90" x2="130" y2="126"/><line x1="112" y1="108" x2="148" y2="108"/>
+      <line x1="80" y1="180" x2="80" y2="242"/><line x1="55" y1="211" x2="105" y2="211"/>
+      <line x1="180" y1="180" x2="180" y2="242"/><line x1="155" y1="211" x2="205" y2="211"/>
+      <line x1="85" y1="290" x2="85" y2="345"/>
+    </g>
+    <g fill="none" stroke="#e8e3d3" stroke-width="1.4">
+      <circle cx="130" cy="108" r="18"/>
+      <rect x="55" y="180" width="50" height="62"/><rect x="155" y="180" width="50" height="62"/>
+      <rect x="50" y="290" width="70" height="55"/>
+      <line x1="48" y1="247" x2="112" y2="247"/><line x1="148" y1="247" x2="212" y2="247"/><line x1="44" y1="350" x2="126" y2="350"/>
+      <rect x="150" y="285" width="45" height="85"/><rect x="160" y="295" width="25" height="14"/>
+      <line x1="144" y1="370" x2="201" y2="370"/>
+            <path d="M-62 370 l3 -6 M-55 370 l2 -5 M8 370 l3 -6 M14 370 l2 -5 M314 370 l2 -6 M320 370 l3 -5" opacity="0.6"/>
+    </g>
+    <circle cx="187" cy="332" r="2" fill="#e8e3d3"/>
+  </svg>
+
+  <i class="badge" style="left:187px;top:343px" data-glyph="roof" data-size="16" data-weight="1.6"></i>
+  <i class="badge" style="left:137px;top:461px" data-glyph="listening" data-size="16" data-weight="1.6"></i>
+  <i class="badge" style="left:237px;top:461px" data-glyph="quiet" data-size="16" data-weight="1.6"></i>
+  <i class="badge" style="left:142px;top:563px" data-glyph="desk" data-size="16" data-weight="1.6"></i>
+  <i class="badge" style="left:270px;top:532px" data-glyph="doorstep" data-size="16" data-weight="1.6"></i>
+  <i class="badge" style="left:31px;top:563px" data-glyph="library" data-size="16" data-weight="1.6"></i>
+  <i class="badge" style="left:367px;top:548px" data-glyph="courtyard" data-size="16" data-weight="1.6"></i>
+
+  <a class="win-link" href="roof.html" aria-label="Enter The Roof" style="left:173px;top:298px;width:44px;height:44px;border-radius:50%"></a>
+  <a class="win-link" href="listening.html" aria-label="Enter the Listening Room" style="left:120px;top:392px;width:50px;height:62px"></a>
+  <a class="win-link" href="quiet.html" aria-label="Enter the Quiet Room" style="left:220px;top:392px;width:50px;height:62px"></a>
+  <a class="win-link" href="desk.html" aria-label="Enter The Desk" style="left:115px;top:502px;width:70px;height:55px"></a>
+  <a class="win-link" href="doorstep.html" aria-label="Open the door to The Doorstep" style="left:215px;top:497px;width:45px;height:85px"></a>
+  <a class="win-link" href="library.html" aria-label="Enter The Library" style="left:19px;top:512px;width:40px;height:46px;border-radius:20px 20px 0 0"></a>
+  <a class="win-link" href="courtyard.html" aria-label="Enter The Courtyard" style="left:323px;top:525px;width:34px;height:57px;border-radius:17px 17px 0 0"></a>
+</section>
+
+<section class="tonight-in" data-tonight-in aria-label="Tonight in the house"></section>
+<section class="directory" aria-label="The rooms">
+  <div class="dir-head label">The rooms</div>
+  <div class="dir-grid" data-rooms></div>
+</section>
+
+<footer class="promises">
+  <span><i data-glyph="install" data-size="17"></i>Install on phone or computer</span>
+  <span><i data-glyph="offline" data-size="17"></i>Works without internet</span>
+  <span><i data-glyph="private" data-size="17"></i>Everything stays on your device</span>
+  <span><i data-glyph="house" data-size="17"></i>Free, always</span>
+</footer>
+</div>
+
+<script src="js/home.js" defer></script>
+</body>
+</html>

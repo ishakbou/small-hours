@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Window — Small Hours</title>
+<meta name="theme-color" content="#000000">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/house.css">
+<link rel="stylesheet" href="css/window.css">
+<script src="js/vendor/astronomy.min.js"></script>
+</head>
+<body class="window-page">
+<canvas class="scene-gl" data-gl aria-hidden="true"></canvas>
+<canvas class="scene-2d" data-2d aria-hidden="true"></canvas>
+<div class="blink" data-blink hidden></div>
+
+<div class="ui" data-ui>
+  <header class="w-top">
+    <a class="w-back" href="listening.html"><i data-glyph="back" data-size="18" data-weight="1.6"></i>Listening Room</a>
+    <div class="w-toggles">
+      <button type="button" class="w-pill" data-sound aria-pressed="false"><i data-glyph="volume" data-size="16" data-weight="1.6"></i><span>Sound off</span></button>
+      <button type="button" class="w-pill" data-music aria-pressed="false"><i data-glyph="melody" data-size="16" data-weight="1.6"></i><span>Music off</span></button>
+      <button type="button" class="w-pill icon" data-full aria-label="Full screen"><i data-glyph="expand" data-size="18" data-weight="1.6"></i></button>
+    </div>
+  </header>
+
+  <div class="w-clock" data-clock-box>
+    <div class="w-time" data-time>--:--</div>
+    <div class="w-date" data-date></div>
+    <div class="w-scene" data-scene-title></div>
+  </div>
+
+  <div class="w-panel" data-panel>
+    <div data-timer-none>
+      <button type="button" class="w-wide" data-timer-open><i data-glyph="timer" data-size="20"></i>Set a timer with a note</button>
+    </div>
+    <div data-timer-run hidden>
+      <div class="w-run">
+        <div><div class="w-lbl"><i data-glyph="timer" data-size="15" data-weight="1.6"></i>TIMER</div><div class="w-left" data-left>00:00</div></div>
+        <div class="w-note"><i data-glyph="note" data-size="18"></i><span data-note-text></span></div>
+      </div>
+      <div class="w-bar"><i data-bar></i></div>
+      <div class="w-row"><button type="button" class="w-btn" data-plus5>+ 5 minutes</button><button type="button" class="w-btn" data-cancel>Stop timer</button></div>
+    </div>
+    <div data-timer-done hidden>
+      <div class="w-lbl big"><i data-glyph="timer" data-size="18" data-weight="1.6"></i>TIME’S UP</div>
+      <div class="w-done-note"><i data-glyph="note" data-size="26" data-weight="1.4"></i><span data-done-note></span></div>
+      <div class="w-row"><button type="button" class="w-btn solid" data-stop>Stop</button><button type="button" class="w-btn" data-again>5 more minutes</button></div>
+    </div>
+    <div class="w-scenes" role="group" aria-label="Scenes" data-scenes></div>
+  </div>
+</div>
+
+<div class="w-sheet-back" data-sheet-back hidden></div>
+<div class="w-sheet" role="dialog" aria-modal="true" aria-labelledby="w-sheet-title" data-sheet hidden>
+  <div class="w-sheet-head"><h2 id="w-sheet-title">A timer with a note</h2><button type="button" class="iconbtn" data-sheet-close aria-label="Close"><i data-glyph="close" data-size="22"></i></button></div>
+  <div class="w-lbl">HOW LONG</div>
+  <div class="w-chips" data-chips></div>
+  <div class="w-custom"><button type="button" class="w-btn" data-minus aria-label="One minute less">−</button><output data-mins>25 min</output><button type="button" class="w-btn" data-plus aria-label="One minute more">+</button></div>
+  <label class="w-lbl" for="w-note-in">THE NOTE</label>
+  <input id="w-note-in" class="w-note-in" type="text" maxlength="80" placeholder="What should I remind you?" data-note-in>
+  <button type="button" class="w-btn solid w-start" data-start><i data-glyph="timer" data-size="18"></i>Start</button>
+  <p class="w-fine">When the time is up, the screen blinks softly and a bell rings until you tap Stop. Keep this page open.</p>
+</div>
+<button type="button" class="w-exit" data-exit aria-label="Leave full screen"><i data-glyph="shrink" data-size="20" data-weight="1.6"></i></button>
+<p class="w-hint" data-hint>Tap the scene to hide the buttons</p>
+<script src="js/window.js" defer></script>
+</body>
+</html>

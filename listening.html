@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Listening Room — Small Hours</title>
+<meta name="theme-color" content="#0c0b09">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/house.css">
+<link rel="stylesheet" href="css/listening.css">
+</head>
+<body class="room-page">
+<div class="shell">
+  <header class="topbar"></header>
+  <nav class="tools"></nav>
+  <main>
+    <!-- ───────── Mixer ───────── -->
+    <section class="tool" data-tool="mixer" aria-labelledby="mix-title">
+      <div class="display">
+        <div class="display-top"><span id="mix-title">YOUR MIX</span><span data-sleep-left></span></div>
+        <div class="display-big" data-mix-name>PRESS PLAY</div>
+        <canvas class="scope" data-scope height="40" aria-hidden="true"></canvas>
+      </div>
+      <div class="transport">
+        <button class="big-play" type="button" data-mix-play aria-pressed="false"><i data-glyph="play" data-size="22"></i><span>PLAY</span></button>
+        <div class="sleep" role="group" aria-label="Fade out after">
+          <span class="lbl"><i data-glyph="sleep" data-size="14" data-weight="1.6"></i>FADE OUT</span>
+          <div class="sleep-opts" data-sleep-opts></div>
+        </div>
+      </div>
+      <div class="mix-head"><span>READY-MADE</span></div>
+      <div class="presets" data-presets></div>
+      <div class="mix-head"><span>MIXER</span><span>TAP ON / OFF · DRAG A LEVEL</span></div>
+      <div class="mixer" data-mixer></div>
+      <p class="foot">REAL RECORDINGS · FREE LICENCES (CREDITS IN THE PLAN OF THE HOUSE)<br>SOUND KEEPS PLAYING AS YOU MOVE BETWEEN ROOMS</p>
+    </section>
+
+    <!-- ───────── Radio ───────── -->
+    <section class="tool" data-tool="radio" aria-labelledby="radio-title">
+      <div class="display">
+        <div class="display-top"><span id="radio-title">NOW PLAYING</span><span class="onair" data-onair hidden><i></i>ON AIR</span></div>
+        <div class="display-big" data-now>TURN THE DIAL</div>
+        <div class="display-sub" data-now-sub>PICK A STATION, OR SEARCH THE WHOLE WORLD</div>
+      </div>
+      <div class="radio-controls">
+        <button class="big-play" type="button" data-radio-play aria-pressed="false"><i data-glyph="play" data-size="22"></i><span>PLAY</span></button>
+        <label class="vol"><i data-glyph="volume" data-size="18"></i><span class="sr-only">Radio volume</span><input type="range" min="0" max="1" step="0.01" value="0.8" data-radio-vol></label>
+      </div>
+      <div class="seg" role="tablist" aria-label="Find a station" data-rtabs>
+        <button type="button" role="tab" data-rtab="picks" aria-selected="true"><i data-glyph="broadcast" data-size="17" data-weight="1.6"></i>PICKS</button>
+        <button type="button" role="tab" data-rtab="search" aria-selected="false"><i data-glyph="search" data-size="17" data-weight="1.6"></i>SEARCH</button>
+        <button type="button" role="tab" data-rtab="favs" aria-selected="false"><i data-glyph="star" data-size="17" data-weight="1.6"></i>SAVED</button>
+      </div>
+
+      <div data-rpanel="picks">
+        <svg class="dial" data-dial viewBox="0 0 342 70" role="img" aria-label="Tuning dial: English, French and Arabic"></svg>
+        <div class="seg" role="group" aria-label="Language" data-langs>
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+          <button type="button" data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
+        </div>
+        <div class="seg two" role="group" aria-label="Talk or music" data-kinds>
+          <button type="button" data-kind="talk" aria-pressed="true"><i data-glyph="broadcast" data-size="18" data-weight="1.6"></i>TALK</button>
+          <button type="button" data-kind="music" aria-pressed="false"><i data-glyph="melody" data-size="18" data-weight="1.6"></i>MUSIC</button>
+        </div>
+        <ul class="stations" data-stations></ul>
+      </div>
+
+      <div data-rpanel="search" hidden>
+        <form class="rsearch" data-rsearch role="search">
+          <label class="sr-only" for="rq">Search stations</label>
+          <input id="rq" type="search" data-rq placeholder="STATION, CITY OR STYLE" autocomplete="off">
+          <button type="submit" class="big-play small" aria-label="Search"><i data-glyph="search" data-size="20"></i></button>
+        </form>
+        <div class="chips" data-rchips></div>
+        <p class="hint-line" data-rhint>Search over 45,000 public stations from the Radio Browser directory.</p>
+        <ul class="stations" data-rresults></ul>
+      </div>
+
+      <div data-rpanel="favs" hidden>
+        <ul class="stations" data-rfavs></ul>
+        <p class="hint-line" data-rfavs-empty>Tap the star next to any station to keep it here.</p>
+      </div>
+      <p class="foot">RADIO NEEDS INTERNET · LIVE PUBLIC STREAMS FROM THE STATIONS THEMSELVES<br>DIRECTORY: RADIO-BROWSER.INFO</p>
+    </section>
+
+    <!-- ───────── Endless music ───────── -->
+    <section class="tool" data-tool="music" aria-labelledby="music-title">
+      <div class="display">
+        <div class="display-top"><span id="music-title">ENDLESS MUSIC</span><span data-music-step></span></div>
+        <div class="display-big" data-music-name>NEVER THE SAME TWICE</div>
+        <canvas class="scope" data-scope2 height="40" aria-hidden="true"></canvas>
+      </div>
+      <div class="seg" role="group" aria-label="Mood" data-moods>
+        <button type="button" data-mood="night" aria-pressed="true">NIGHT</button>
+        <button type="button" data-mood="rain" aria-pressed="false">RAIN</button>
+        <button type="button" data-mood="dawn" aria-pressed="false">DAWN</button>
+      </div>
+      <div class="transport">
+        <button class="big-play" type="button" data-music-play aria-pressed="false"><i data-glyph="play" data-size="22"></i><span>PLAY</span></button>
+      </div>
+      <p class="foot">SOFT CHORDS AND GLASS NOTES, COMPOSED LIVE ON YOUR DEVICE.<br>IT PLAYS UNDER THE MIXER AND IN THE WINDOW TOO.</p>
+    </section>
+
+    <!-- ───────── Candle ───────── -->
+    <section class="tool" data-tool="candle" aria-labelledby="cd-title">
+      <h1 class="sr-only" id="cd-title">Candle</h1>
+      <canvas class="candle" data-candle aria-label="A candle, burning" role="img"></canvas>
+      <div class="transport" style="justify-content:center">
+        <button class="big-play" type="button" data-candle-go aria-pressed="true"><i data-glyph="candle" data-size="22"></i><span>BLOW IT OUT</span></button>
+      </div>
+      <p class="foot">A WARM LIGHT TO READ BY, OR TO FALL ASLEEP TO.<br>TURN YOUR SCREEN BRIGHTNESS DOWN.</p>
+    </section>
+  </main>
+</div>
+<script src="js/listening.js" defer></script>
+</body>
+</html>

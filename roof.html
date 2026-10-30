@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Roof — Small Hours</title>
+<meta name="theme-color" content="#f1ead8">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/house.css">
+<link rel="stylesheet" href="css/roof.css">
+<script src="js/vendor/astronomy.min.js"></script>
+</head>
+<body class="room-page">
+<div class="shell">
+  <header class="topbar"></header>
+  <nav class="tools"></nav>
+  <main>
+    <!-- ───────── Star map poster ───────── -->
+    <section class="tool" data-tool="starmap" aria-labelledby="sm-title">
+      <div class="roof-head">
+        <h1 id="sm-title">A Map of the Sky</h1>
+        <p>The real sky over any place, on any night you choose.</p>
+      </div>
+      <div class="sm-layout">
+        <figure class="poster-frame" data-poster aria-live="polite"></figure>
+        <form class="sm-form" data-sm-form autocomplete="off">
+          <label class="f wide"><span class="label"><i data-glyph="oneline" data-size="13" data-weight="1.7"></i>Words on the poster</span>
+            <input type="text" name="words" maxlength="40" value="the night you were born"></label>
+          <label class="f"><span class="label"><i data-glyph="countdown" data-size="13" data-weight="1.7"></i>Date</span>
+            <input type="date" name="date" required></label>
+          <label class="f"><span class="label"><i data-glyph="clock" data-size="13" data-weight="1.7"></i>Time</span>
+            <input type="time" name="time" required></label>
+          <div class="f wide place-field">
+            <label class="label" for="sm-place"><i data-glyph="location" data-size="13" data-weight="1.7"></i>Place</label>
+            <input id="sm-place" type="search" name="place" placeholder="Type a city" aria-describedby="sm-place-now">
+            <ul class="sm-cities" data-sm-cities></ul>
+            <div class="place-now"><span id="sm-place-now" data-place-now></span><button type="button" class="linkish" data-sm-geo>Use where I am</button></div>
+          </div>
+          <label class="f"><span class="label"><i data-glyph="daynight" data-size="13" data-weight="1.7"></i>Time zone</span>
+            <select name="tz" data-sm-tz></select></label>
+          <fieldset class="f wide styles"><legend class="label">Look</legend>
+            <label><input type="radio" name="style" value="almanac" checked> Almanac</label>
+            <label><input type="radio" name="style" value="night"> Night</label>
+          </fieldset>
+        </form>
+      </div>
+      <div class="row sm-actions">
+        <button class="btn solid" type="button" data-sm-print><i data-glyph="print" data-size="18"></i>Print poster</button>
+        <button class="btn" type="button" data-sm-save><i data-glyph="install" data-size="18"></i>Save image</button>
+        <button class="btn" type="button" data-sm-share hidden><i data-glyph="share" data-size="18"></i>Send</button>
+      </div>
+      <p class="fine">The sky is calculated from real star positions. Times use the time zone you pick.</p>
+    </section>
+
+    <!-- ───────── Moon tonight ───────── -->
+    <section class="tool" data-tool="moon" aria-labelledby="moon-title">
+      <div class="roof-head">
+        <h1 id="moon-title">The Moon Tonight</h1>
+        <p data-moon-sub>Its real face, right now.</p>
+      </div>
+      <div class="moon-big" data-moon-big></div>
+      <dl class="moon-facts" data-moon-facts></dl>
+      <div class="year-head">
+        <h2>A year of moons</h2>
+        <div class="year-nav">
+          <button class="iconbtn" type="button" data-year-prev aria-label="Previous year"><i data-glyph="back" data-size="20"></i></button>
+          <span data-year-label></span>
+          <button class="iconbtn" type="button" data-year-next aria-label="Next year"><i data-glyph="next" data-size="20"></i></button>
+        </div>
+      </div>
+      <div class="year-grid" data-year aria-label="The moon on every night of the year"></div>
+      <div class="row sm-actions"><button class="btn" type="button" data-year-print><i data-glyph="print" data-size="18"></i>Print the year</button></div>
+    </section>
+
+    <!-- ───────── Tonight's sky ───────── -->
+    <section class="tool" data-tool="sky" aria-labelledby="sky-title">
+      <div class="roof-head">
+        <h1 id="sky-title">Tonight’s Sky</h1>
+        <p data-sky-sub>What is above you right now.</p>
+      </div>
+      <div class="sky-layout">
+        <figure class="sky-frame" data-sky aria-live="polite"></figure>
+        <div>
+          <h2 class="up-title">Up there now</h2>
+          <ul class="up-list" data-up></ul>
+          <p class="fine" style="text-align:left">Hold the phone up and turn until the letters match: N to the north. East sits on the left because you are looking up.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ───────── Learn the sky ───────── -->
+    <section class="tool" data-tool="learn" aria-labelledby="ln-title">
+      <div class="roof-head">
+        <h1 id="ln-title">Learn the Sky</h1>
+        <p data-ln-score>Name the shape. Then hear its old story.</p>
+      </div>
+      <figure class="ln-frame" data-ln-figure></figure>
+      <div class="ln-choices" role="group" aria-label="Which constellation is this?" data-ln-choices></div>
+      <div class="ln-story" data-ln-story hidden aria-live="polite"></div>
+      <div class="row sm-actions"><button class="btn solid" type="button" data-ln-next hidden>Next star shape</button></div>
+    </section>
+    <!-- ───────── Day & night map ───────── -->
+    <section class="tool" data-tool="daynight" aria-labelledby="dn-title">
+      <div class="roof-head">
+        <h1 id="dn-title">Where It Is Night</h1>
+        <p data-dn-sub>The shadow of the Earth, right now.</p>
+      </div>
+      <figure class="dn-frame" data-dn></figure>
+      <ul class="up-list dn-cities" data-dn-cities></ul>
+    </section>
+    <!-- ───────── The day as an arc ───────── -->
+    <section class="tool" data-tool="sunarc" aria-labelledby="arc-title">
+      <div class="roof-head">
+        <h1 id="arc-title">The Day as an Arc</h1>
+        <p data-arc-sub>The sun’s path over your place today.</p>
+      </div>
+      <figure class="arc-frame" data-arc></figure>
+      <dl class="moon-facts" data-arc-facts></dl>
+    </section>
+  </main>
+</div>
+<script src="js/roof.js" defer></script>
+</body>
+</html>

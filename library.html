@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Library — Small Hours</title>
+<meta name="theme-color" content="#10201a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/house.css">
+<link rel="stylesheet" href="css/library.css">
+</head>
+<body class="room-page">
+<div class="shell">
+  <header class="topbar"></header>
+  <nav class="tools"></nav>
+  <main>
+    <!-- ───────── Stories ───────── -->
+    <section class="tool" data-tool="stories" aria-labelledby="st-title">
+      <div class="shelf-view">
+        <h1 class="lib-title" id="st-title">Stories for the end of the day</h1>
+        <p class="lib-sub">Pick a book. It can read itself to you.</p>
+        <div class="resume" data-resume hidden></div>
+        <div class="tonight-story" data-tonight-story></div>
+        <div class="seg" role="group" aria-label="Language" data-st-langs></div>
+        <div class="shelves" data-shelves></div>
+        <p class="lib-fine" data-lib-count></p>
+      </div>
+    </section>
+
+    <!-- ───────── Poems ───────── -->
+    <section class="tool" data-tool="poems" aria-labelledby="po-title">
+      <div class="shelf-view">
+        <h1 class="lib-title" id="po-title">Poems, read slowly</h1>
+        <div class="tonight" data-tonight></div>
+        <div class="contents" data-contents></div>
+      </div>
+    </section>
+
+    <!-- ───────── Word of the night ───────── -->
+    <section class="tool" data-tool="word" aria-labelledby="wd-title">
+      <h1 class="sr-only" id="wd-title">Word of the night</h1>
+      <div class="wordcard" data-wordcard></div>
+      <p class="word-next" data-word-next></p>
+      <div class="collect">
+        <div class="collect-head"><span>Your collection</span><span data-collect-count></span></div>
+        <div class="tokens" data-tokens></div>
+        <p class="lib-fine">A new word arrives every night. Come back to collect them all.</p>
+      </div>
+    </section>
+
+    <!-- ───────── The open book (stories and poems) ───────── -->
+    <article class="reader" data-reader hidden aria-live="off">
+      <div class="reader-top">
+        <a class="iconbtn" data-reader-back href="#stories" aria-label="Back to the shelf"><i data-glyph="back" data-size="22"></i></a>
+        <span class="reader-crumb" data-crumb></span>
+      </div>
+      <div class="page" data-page></div>
+      <div class="dock" data-dock>
+        <div class="dock-row">
+          <button type="button" class="read-go" data-read-go aria-label="Read aloud"><i data-glyph="play" data-size="22"></i></button>
+          <div class="dock-what"><div class="dock-title" data-dock-title>Read to me</div><div class="dock-sub" data-dock-sub></div></div>
+          <button type="button" class="dock-btn" data-speed aria-label="Reading speed"><i data-glyph="speed" data-size="18"></i><span data-speed-label>Calm</span></button>
+          <button type="button" class="dock-btn icon" data-textsize aria-label="Text size"><span class="aa"><small>A</small>A</span></button>
+          <button type="button" class="dock-btn icon" data-dark aria-pressed="false" aria-label="Dark page for reading in bed"><i data-glyph="moon" data-size="18"></i></button>
+        </div>
+        <div class="dock-row two">
+          <div class="beds" role="group" aria-label="Sound while you read" data-beds></div>
+          <button type="button" class="timer-chip" data-timer aria-pressed="false" title="Stop reading after a while"><i data-glyph="sleep" data-size="16"></i><span data-timer-label>To the end</span></button>
+          <label class="voice"><span class="sr-only">Voice</span><i data-glyph="aloud" data-size="17"></i><select data-voice></select></label>
+        </div>
+        <p class="dock-note" data-dock-note hidden></p>
+      </div>
+    </article>
+  </main>
+</div>
+<script src="js/library.js" defer></script>
+</body>
+</html>

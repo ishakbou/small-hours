@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Courtyard — Small Hours</title>
+<meta name="theme-color" content="#f4efe4">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/house.css">
+<link rel="stylesheet" href="css/courtyard.css">
+<script src="js/vendor/astronomy.min.js"></script>
+</head>
+<body class="room-page">
+<div class="zellige top" aria-hidden="true"></div>
+<div class="shell">
+  <header class="topbar"></header>
+  <nav class="tools"></nav>
+  <main>
+    <div class="noplace" data-noplace hidden>
+      <p>Prayer times and the qibla need to know where you are.</p>
+      <div class="row"><button type="button" class="ct-btn solid" data-geo><i data-glyph="location" data-size="18"></i>Use where I am</button><button type="button" class="ct-btn" data-pick><i data-glyph="search" data-size="18"></i>Type a city</button></div>
+      <p class="ct-fine">Your place stays on this device.</p>
+    </div>
+
+    <!-- ───────── Prayer times ───────── -->
+    <section class="tool" data-tool="prayer" aria-labelledby="pr-title">
+      <h1 class="sr-only" id="pr-title">Prayer times</h1>
+      <div class="arch" data-arch>
+        <div class="arch-in">
+          <div class="arch-label" data-next-label>NEXT</div>
+          <div class="arch-ar" lang="ar" data-next-ar></div>
+          <div class="arch-en" data-next-en></div>
+          <div class="arch-time" data-next-time></div>
+          <div class="arch-left" data-next-left></div>
+          <div class="arch-hijri" lang="ar" data-hijri-line></div>
+        </div>
+      </div>
+      <ol class="prayers" data-prayers></ol>
+      <div class="ct-where" data-where></div>
+      <details class="ct-how" data-how>
+        <summary><i data-glyph="settings" data-size="17"></i>How the times are worked out</summary>
+        <label class="ct-field"><span>Method</span><select data-method></select></label>
+        <div class="ct-field"><span>Asr</span><div class="ct-seg" data-asr></div></div>
+        <label class="ct-check"><input type="checkbox" data-chime> A soft chime at each prayer, while this page is open</label>
+        <p class="ct-fine">Times are calculated from the sun for your place. Your local mosque may differ by a few minutes; its times come first.</p>
+      </details>
+    </section>
+
+    <!-- ───────── Qibla ───────── -->
+    <section class="tool" data-tool="qibla" aria-labelledby="qb-title">
+      <h1 class="ct-title" id="qb-title">Towards the Kaaba</h1>
+      <div class="dial-wrap"><svg class="dial" data-dial viewBox="-120 -120 240 240" role="img" aria-label="Qibla compass"></svg></div>
+      <div class="qb-read" data-qb-read aria-live="polite"></div>
+      <div class="row center"><button type="button" class="ct-btn solid" data-compass><i data-glyph="compass" data-size="18"></i>Use the phone’s compass</button></div>
+      <p class="ct-fine" data-qb-hint>Lay the phone flat, away from metal and magnets.</p>
+      <div class="qb-map" data-qb-map></div>
+    </section>
+
+    <!-- ───────── Hijri calendar ───────── -->
+    <section class="tool" data-tool="calendar" aria-labelledby="cl-title">
+      <h1 class="sr-only" id="cl-title">Hijri calendar</h1>
+      <div class="today-h" data-today-h></div>
+      <div class="ramadan" data-ramadan></div>
+      <div class="month">
+        <div class="month-head"><button type="button" class="iconbtn" data-mprev aria-label="Previous month"><i data-glyph="back" data-size="22"></i></button><div data-mtitle></div><button type="button" class="iconbtn" data-mnext aria-label="Next month"><i data-glyph="next" data-size="22"></i></button></div>
+        <div class="mgrid" data-mgrid></div>
+      </div>
+      <h2 class="ct-h2">Coming days</h2>
+      <ul class="days" data-days></ul>
+      <div class="newmoon" data-newmoon></div>
+      <p class="ct-fine">Dates follow the Umm al-Qura calendar. Where the month begins with the sighting of the moon, it may differ by a day.</p>
+    </section>
+  </main>
+</div>
+<script src="js/courtyard.js" defer></script>
+</body>
+</html>

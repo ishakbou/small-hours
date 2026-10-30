@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Desk — Small Hours</title>
+<meta name="theme-color" content="#f8f6ef">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/house.css">
+<link rel="stylesheet" href="css/desk.css">
+</head>
+<body class="room-page">
+<div class="margin-line" aria-hidden="true"></div>
+<div class="shell">
+  <header class="topbar"></header>
+  <nav class="tools"></nav>
+  <main>
+    <!-- ───────── Study garden ───────── -->
+    <section class="tool" data-tool="garden" aria-labelledby="gd-title">
+      <h1 class="pen-title" id="gd-title">today's study garden</h1>
+      <div data-gd-setup>
+        <label class="d-field"><span class="d-lbl">WHAT ARE YOU STUDYING?</span><input type="text" data-subject maxlength="40" placeholder="maths, history, a book…"></label>
+        <div class="d-lbl" style="margin-top:14px">HOW LONG</div>
+        <div class="chips" data-lengths></div>
+        <div class="d-row"><button type="button" class="pen-btn big" data-gd-start><i data-glyph="garden" data-size="22" data-weight="1.6"></i>plant a seed &amp; start</button></div>
+      </div>
+      <div data-gd-run hidden>
+        <div class="timer-row">
+          <div><div class="big-time" data-gd-left>25:00</div><div class="d-small" data-gd-info></div></div>
+        </div>
+        <div class="d-row">
+          <button type="button" class="pen-btn" data-gd-pause>pause</button>
+          <button type="button" class="pen-btn red" data-gd-quit>give up</button>
+          <span class="pen-aside">(the plant<br>will wilt)</span>
+        </div>
+      </div>
+      <figure class="garden" aria-label="This week's garden" data-garden></figure>
+      <div class="pen-line" data-gd-sum></div>
+      <div class="sticky" data-next-exam hidden></div>
+    </section>
+
+    <!-- ───────── Flashcards ───────── -->
+    <section class="tool" data-tool="cards" aria-labelledby="fc-title">
+      <h1 class="pen-title" id="fc-title">flashcards</h1>
+      <p class="d-small">Cards you get wrong come back tomorrow. Cards you know wait longer and longer.</p>
+      <div data-fc></div>
+    </section>
+
+    <!-- ───────── Exam countdown ───────── -->
+    <section class="tool" data-tool="exams" aria-labelledby="ex-title">
+      <h1 class="pen-title" id="ex-title">exam countdown</h1>
+      <div data-exams></div>
+      <form class="add-exam" data-exam-form>
+        <label class="d-field"><span class="d-lbl">EXAM</span><input type="text" name="name" maxlength="40" required placeholder="maths"></label>
+        <label class="d-field"><span class="d-lbl">DATE</span><input type="date" name="date" required></label>
+        <button type="submit" class="pen-btn"><i data-glyph="plus" data-size="18" data-weight="1.6"></i>add</button>
+      </form>
+    </section>
+
+    <!-- ───────── Focus mode ───────── -->
+    <section class="tool" data-tool="focus" aria-labelledby="fo-title">
+      <h1 class="pen-title" id="fo-title">focus mode</h1>
+      <p class="d-small">One tap: a study session starts, soft rain and a quiet café play, and the screen stays awake. Put the phone face up and work.</p>
+      <div class="d-row" style="margin-top:22px"><button type="button" class="pen-btn big" data-focus-go><i data-glyph="focus" data-size="24" data-weight="1.6"></i><span>start focus</span></button></div>
+      <div class="d-lbl" style="margin-top:22px">SOUND</div>
+      <div class="chips" data-focus-sound></div>
+      <p class="d-small" data-focus-state style="margin-top:18px"></p>
+    </section>
+    <!-- ───────── Memory palace ───────── -->
+    <section class="tool" data-tool="palace" aria-labelledby="mp-title">
+      <h1 class="pen-title" id="mp-title">memory palace</h1>
+      <p class="d-small">Picture a place you know by heart. Leave one thing to remember at each spot, as a strange, vivid picture. Later, walk through and pick them up again.</p>
+      <div data-mp></div>
+    </section>
+  </main>
+</div>
+<script src="js/desk.js" defer></script>
+</body>
+</html>

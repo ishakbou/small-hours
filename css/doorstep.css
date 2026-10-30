@@ -1,0 +1,51 @@
+/* The Doorstep — old post and stamps */
+.airmail { position: fixed; left: 0; right: 0; top: 0; height: 10px; z-index: 5; background: repeating-linear-gradient(135deg, #a8322a 0 14px, #e6d7bb 14px 22px, #2d4a7a 22px 36px, #e6d7bb 36px 44px); }
+@media (min-width: 900px) { .airmail { top: 60px; } }
+.room-doorstep .topbar { margin-top: 10px; }
+.room-doorstep .tools { border-bottom: 1.5px dashed var(--line); }
+.room-doorstep .tool { position: relative; }
+.postmark { position: absolute; right: -6px; top: 22px; width: 112px; transform: rotate(-10deg); pointer-events: none; }
+.d-title { margin: 18px 0 0; width: 64%; font-family: 'Baskerville', Georgia, serif; font-style: italic; font-weight: 400; font-size: 28px; line-height: 1.15; }
+.d-sub { width: 66%; font-size: 13px; line-height: 1.45; color: var(--muted); margin: 8px 0 0; }
+.name-field { display: flex; flex-direction: column; gap: 4px; margin-top: 18px; }
+.name-field input { height: 52px; border: 0; border-bottom: 2px solid var(--ink); background: transparent; font-family: 'Baskerville', Georgia, serif; font-size: 32px; color: var(--ink); padding: 0; border-radius: 0; }
+.name-field input::placeholder { color: rgba(43,33,24,.45); }
+.staff-wrap { margin-top: 16px; }
+.staff { width: 100%; height: auto; display: block; }
+.staff .note { transition: fill .15s, transform .15s; transform-box: fill-box; transform-origin: center; }
+.staff .note.on { fill: var(--accent); transform: scale(1.25); }
+.actions { display: flex; gap: 10px; align-items: center; margin-top: 14px; }
+.actions .btn { flex: 1 1 0; border-width: 1.5px; font-family: 'Special Elite', monospace; text-transform: none; letter-spacing: 0; font-size: 14px; padding: 0 10px; }
+.play-round { flex: 0 0 auto; width: 58px; height: 58px; border-radius: 50%; border: 0; background: var(--ink); color: var(--bg); display: flex; align-items: center; justify-content: center; padding-left: 4px; cursor: pointer; }
+.fine { display: flex; justify-content: center; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); margin-top: 18px; }
+.gift-banner { display: flex; align-items: center; gap: 10px; margin-top: 12px; padding: 12px 14px; border: 1.5px dashed var(--accent); color: var(--accent); font-size: 14px; }
+
+.letter-in { min-height: 170px; border: 1.5px solid var(--line); background: rgba(255,255,255,.18); font-family: 'Baskerville', Georgia, serif; font-style: italic; font-size: 18px; line-height: 1.5; color: var(--ink); padding: 12px; resize: vertical; }
+.date-in { height: 46px !important; font-family: 'Special Elite', monospace !important; font-size: 18px !important; width: 100%; min-width: 0; }
+.envelope { position: relative; width: min(340px, 100%); aspect-ratio: 1.6; margin: 40px auto 0; background: #efe5cc; border: 1.5px solid var(--ink); box-shadow: 4px 5px 0 rgba(43,33,24,.15); overflow: hidden; }
+.envelope .flap { position: absolute; left: 0; right: 0; top: 0; height: 58%; background: #e6d7bb; clip-path: polygon(0 0, 100% 0, 50% 100%); border-bottom: 1.5px solid var(--ink); transform-origin: top; transition: transform .9s ease; }
+.envelope.open .flap { transform: rotateX(180deg); }
+.envelope .seal { position: absolute; left: 50%; top: 58%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: var(--accent); box-shadow: inset 0 0 0 4px rgba(0,0,0,.15); display: flex; align-items: center; justify-content: center; color: #f3e6cf; font-family: 'Baskerville', serif; font-style: italic; font-size: 18px; transition: opacity .5s; }
+.envelope.open .seal { opacity: 0; }
+.env-to { position: absolute; left: 0; right: 0; bottom: 14%; text-align: center; font-family: 'Baskerville', serif; font-style: italic; font-size: 20px; }
+.env-msg { text-align: center; font-size: 15px; margin-top: 18px; }
+.letter-paper { margin: 22px auto 0; max-width: 460px; background: #fbf5e6; border: 1px solid var(--line); padding: 26px 22px; font-family: 'Baskerville', Georgia, serif; font-style: italic; font-size: 18px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; box-shadow: 3px 4px 0 rgba(43,33,24,.1); }
+.pc-frame { margin: 18px 0 0; }
+.pc-frame canvas { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+
+/* greeting cards */
+.gc-chips, .gc-langs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.gc-langs { margin-top: 10px; }
+.gc-chips button, .gc-langs button { min-height: 40px; padding: 0 12px; border: 1.5px solid var(--line); background: transparent; color: var(--ink); font-family: 'Special Elite', monospace; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.gc-chips button[aria-pressed="true"], .gc-langs button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.gc-langs button[lang="ar"] { font-family: 'Amiri', 'Kufi', serif; font-size: 17px; }
+.gc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.name-field.small input { font-size: 24px; height: 44px; }
+.gc-msg { min-height: 92px; font-size: 17px; }
+.gc-msg[dir="rtl"] { font-family: 'Amiri', serif; font-style: normal; font-size: 20px; }
+.gc-reset { border: 0; background: none; padding: 0 0 0 8px; font: inherit; font-size: 11px; color: var(--accent); text-decoration: underline; cursor: pointer; letter-spacing: .06em; }
+.gc-frame { margin: 18px auto 0; max-width: 420px; box-shadow: 6px 8px 0 rgba(43,33,24,.18); border: 1.5px solid var(--ink); background: #fff; line-height: 0; }
+.gc-frame canvas { width: 100%; height: auto; display: block; }
+.name-field .label { display: flex; align-items: baseline; }
+.gc-row .name-field { min-width: 0; }
+.gc-row input { width: 100%; min-width: 0; }

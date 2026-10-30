@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Small Hours</title>
+<meta name="description" content="A house for the late part of the night: the real sky, real sounds and scenes, calm, stories read aloud, study, prayer times and small gifts. Free, private, works offline.">
+<meta name="theme-color" content="#0f1524">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="css/house.css">
+<link rel="stylesheet" href="css/shell.css">
+</head>
+<body class="room-house shell-page">
+<div class="panes" data-panes>
+  <section class="pane" data-pane="a"><iframe name="sh-pane-a" title="Small Hours" allow="autoplay; fullscreen; geolocation; screen-wake-lock; clipboard-write; web-share; accelerometer; gyroscope; magnetometer" allowfullscreen></iframe></section>
+  <section class="pane" data-pane="b" hidden><iframe name="sh-pane-b" title="Second room" allow="autoplay; fullscreen; geolocation; screen-wake-lock; clipboard-write; web-share; accelerometer; gyroscope; magnetometer" allowfullscreen></iframe></section>
+</div>
+<div class="player" data-player hidden>
+  <button type="button" class="pl-main" data-pl-toggle aria-label="Pause everything"></button>
+  <div class="pl-what"><span class="pl-g" data-pl-g></span><div class="pl-text"><div class="pl-title" data-pl-title></div><div class="pl-sub" data-pl-sub></div></div></div>
+  <label class="pl-vol"><span class="sr-only">Volume</span><i data-glyph="volume" data-size="18"></i><input type="range" min="0" max="1" step="0.01" value="1" data-pl-vol></label>
+  <button type="button" class="pl-btn" data-pl-sleep aria-label="Fade out timer"><i data-glyph="sleep" data-size="18"></i><span data-pl-sleep-label>off</span></button>
+  <button type="button" class="pl-btn" data-pl-follow aria-pressed="false" title="Keep this sound playing in every room" hidden><i data-glyph="endless" data-size="18"></i><span>Follow me</span></button>
+  <button type="button" class="pl-btn icon" data-pl-amb aria-pressed="true" title="The night sound outside the house"><i data-glyph="house" data-size="18"></i></button>
+  <button type="button" class="pl-btn" data-pl-split aria-pressed="false"><i data-glyph="computer" data-size="18"></i><span data-pl-split-label>Two rooms</span></button>
+  <button type="button" class="pl-btn icon" data-pl-stop aria-label="Stop all sound"><i data-glyph="close" data-size="18"></i></button>
+</div>
+<script src="js/index.js" defer></script>
+</body>
+</html>

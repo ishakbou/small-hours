@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quiet Room — Small Hours</title>
+<meta name="theme-color" content="#161814">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/house.css">
+<link rel="stylesheet" href="css/quiet.css">
+</head>
+<body class="room-page">
+<div class="shell">
+  <header class="topbar"></header>
+  <nav class="tools"></nav>
+  <main>
+    <!-- ───────── Breathe ───────── -->
+    <section class="tool" data-tool="breathe" aria-labelledby="br-title">
+      <h1 class="q-title" id="br-title">Nothing to do here<br>but breathe.</h1>
+      <div class="breath" data-breath>
+        <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3" data-orb></div>
+        <div class="breath-text"><div class="phase" data-phase aria-live="polite">ready when you are</div><div class="count" data-count></div></div>
+      </div>
+      <div class="patterns" role="group" aria-label="Breathing pattern" data-patterns></div>
+      <p class="q-sub" data-pattern-desc></p>
+      <div class="q-row"><button type="button" class="q-btn" data-breath-go>Begin</button></div>
+      <a class="q-pill" href="#grounding"><i data-glyph="grounding" data-size="20" data-weight="1.4"></i>Too hard right now? Try grounding</a>
+    </section>
+
+    <!-- ───────── Grounding 5-4-3-2-1 ───────── -->
+    <section class="tool" data-tool="grounding" aria-labelledby="gr-title">
+      <h1 class="q-title" id="gr-title">Come back to the room.</h1>
+      <p class="q-sub">Slowly. No need to say anything out loud.</p>
+      <div class="ground" data-ground aria-live="polite"></div>
+      <div class="q-row"><button type="button" class="q-btn" data-ground-next>Begin</button><button type="button" class="q-btn ghost" data-ground-restart hidden>Again</button></div>
+    </section>
+
+    <!-- ───────── Burn your worries ───────── -->
+    <section class="tool" data-tool="burn" aria-labelledby="bn-title">
+      <h1 class="q-title" id="bn-title">Write it down.<br>Then let it go.</h1>
+      <div class="burn-box">
+        <textarea data-worry maxlength="600" placeholder="What is weighing on you tonight?" aria-label="Your worry"></textarea>
+        <canvas data-burn-canvas aria-hidden="true"></canvas>
+      </div>
+      <div class="q-row"><button type="button" class="q-btn" data-burn-go><i data-glyph="burn" data-size="18" data-weight="1.4"></i>Let it burn</button></div>
+      <p class="q-fine"><i data-glyph="private" data-size="15" data-weight="1.4"></i>Nothing is saved. Not even on this phone.</p>
+    </section>
+
+    <!-- ───────── Meditation bell ───────── -->
+    <section class="tool" data-tool="bell" aria-labelledby="bl-title">
+      <h1 class="q-title" id="bl-title">Sit with the bell.</h1>
+      <p class="q-sub">It rings to begin, softly along the way if you like, and three times at the end.</p>
+      <div class="bell-face" data-bell-face><div class="bell-left" data-bell-left>10:00</div><div class="count" data-bell-state>READY</div></div>
+      <div class="patterns" role="group" aria-label="How long" data-bell-lens></div>
+      <div class="patterns" role="group" aria-label="Bells along the way" data-bell-every></div>
+      <div class="q-row"><button type="button" class="q-btn" data-bell-go>Begin</button></div>
+    </section>
+
+    <!-- ───────── One line a day ───────── -->
+    <section class="tool" data-tool="oneline" aria-labelledby="ol-title">
+      <h1 class="q-title" id="ol-title">One line for today.</h1>
+      <p class="q-sub" data-ol-date></p>
+      <form class="ol-form" data-ol-form>
+        <input type="text" maxlength="160" data-ol-in placeholder="Just one sentence about today" aria-label="Today's line">
+        <button type="submit" class="q-btn">Keep it</button>
+      </form>
+      <div class="ol-ago" data-ol-ago hidden></div>
+      <ol class="ol-list" data-ol-list reversed></ol>
+      <p class="q-fine"><i data-glyph="private" data-size="15" data-weight="1.4"></i>Kept only on this device. Settings › Backup to keep it safe.</p>
+    </section>
+
+    <!-- ───────── Sleep & gentle wake-up ───────── -->
+    <section class="tool" data-tool="sleep" aria-labelledby="sl-title">
+      <h1 class="q-title" id="sl-title">Time to sleep.</h1>
+      <p class="q-sub">The screen turns into a dim red clock. The sound fades away. In the morning, light and birdsong come up slowly.</p>
+      <div class="sl-set">
+        <div class="sl-lbl"><i data-glyph="mixer" data-size="16" data-weight="1.4"></i>Sound to fall asleep to</div>
+        <div class="patterns" role="group" aria-label="Sound to fall asleep to" data-sl-sound></div>
+        <div class="sl-lbl"><i data-glyph="sleep" data-size="16" data-weight="1.4"></i>Let it fade away after</div>
+        <div class="patterns" role="group" aria-label="Fade after" data-sl-fade></div>
+        <div class="sl-lbl"><i data-glyph="sunrise" data-size="16" data-weight="1.4"></i>Wake me gently</div>
+        <div class="sl-wake">
+          <button type="button" class="sl-switch" role="switch" aria-checked="false" data-sl-wake-on aria-label="Gentle wake-up"><span></span></button>
+          <input type="time" value="07:00" data-sl-time aria-label="Wake-up time">
+          <span class="sl-when" data-sl-when></span>
+        </div>
+        <div class="patterns" role="group" aria-label="How slowly" data-sl-rise></div>
+      </div>
+      <div class="q-row"><button type="button" class="q-btn" data-sl-go><i data-glyph="bedtime" data-size="20" data-weight="1.4"></i>Go to sleep</button></div>
+      <p class="q-fine sl-fine"><i data-glyph="phone" data-size="15" data-weight="1.4"></i><span>Leave this page open and the phone plugged in. The screen stays on, very dim. On iPhone, the ring/silent switch must be on ring.</span></p>
+    </section>
+  </main>
+</div>
+<div class="night" data-night hidden>
+  <div class="night-sky" data-night-sky></div>
+  <div class="night-clock" data-night-clock><div class="nc-time" data-nc-time></div><div class="nc-sub" data-nc-sub></div></div>
+  <div class="night-ctl" data-night-ctl>
+    <button type="button" class="nb" data-nb-snooze hidden>Five more minutes</button>
+    <button type="button" class="nb" data-nb-up>I’m awake</button>
+  </div>
+  <div class="morning" data-morning hidden><div class="m-hello">Good morning.</div><div class="m-day" data-m-day></div></div>
+</div>
+<script src="js/quiet.js" defer></script>
+</body>
+</html>
