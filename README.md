@@ -1,6 +1,8 @@
 # Small Hours
 
-A house for the late part of the night. Seven rooms of small, free tools, and the sound follows you from room to room.
+**Open it here: https://ishakbou.github.io/small-hours/**
+
+A house for the late part of the night. Seven rooms of small, free tools: the real sky, real recorded sounds, moving scenes, stories read aloud, prayer times and calm.
 
 - **The Roof**: a real star map poster for any night and place, the moon tonight, tonight's sky, a day-and-night map of the world.
 - **Listening Room**: a mixer of ten real recorded sounds (rain, storm, wind, sea, fire, café, birds, stream, crickets, train), **The Window** (moving scenes with a clock and a timer), world radio with search and saved stations, endless music, a candle.
