@@ -107,11 +107,21 @@
     <!-- ───────── Candle ───────── -->
     <section class="tool" data-tool="candle" aria-labelledby="cd-title">
       <h1 class="sr-only" id="cd-title">Candle</h1>
-      <canvas class="candle" data-candle aria-label="A candle, burning" role="img"></canvas>
+      <div class="seg cd-kinds" data-cd-kinds></div>
+      <div class="cd-stage" data-cd-stage>
+        <canvas class="candle" data-candle aria-label="A candle burning on a table at night, by a window" role="img"></canvas>
+        <button type="button" class="cd-full" data-cd-full aria-label="Full screen"><i data-glyph="expand" data-size="18" data-weight="1.6"></i></button>
+        <button type="button" class="cd-exit" data-cd-exit aria-label="Leave full screen"><i data-glyph="shrink" data-size="18" data-weight="1.6"></i></button>
+        <div class="cd-left" data-cd-left aria-live="polite"></div>
+      </div>
+      <div class="cd-burn">
+        <div class="lbl"><i data-glyph="timer" data-size="14"></i>LET IT BURN</div>
+        <div class="sleep-opts" data-cd-burn></div>
+      </div>
       <div class="transport" style="justify-content:center">
         <button class="big-play" type="button" data-candle-go aria-pressed="true"><i data-glyph="candle" data-size="22"></i><span>BLOW IT OUT</span></button>
       </div>
-      <p class="foot">A WARM LIGHT TO READ BY, OR TO FALL ASLEEP TO.<br>TURN YOUR SCREEN BRIGHTNESS DOWN.</p>
+      <p class="foot">A WARM LIGHT TO READ BY, OR TO FALL ASLEEP TO.<br>MOVE YOUR FINGER NEAR THE FLAME, OR TAP IT. TURN YOUR SCREEN BRIGHTNESS DOWN.</p>
     </section>
   </main>
 </div>
