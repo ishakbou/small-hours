@@ -38,6 +38,15 @@
 .dir-tools { display: none; list-style: none; margin: 0; padding: 0; }
 .promises { display: none; }
 
+/* who made it */
+.maker { max-width: 390px; margin: 26px auto 34px; padding: 18px 28px 0; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.maker-line { margin: 0; font-style: italic; font-size: 16px; color: var(--muted); border-top: 1px solid var(--line-strong); padding-top: 16px; width: 100%; }
+.maker-line b { font-weight: 400; font-style: normal; color: var(--ink); font-family: 'Fell SC', serif; letter-spacing: .08em; font-size: 18px; }
+.maker-btn { display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 18px; border: 1px solid var(--accent); border-radius: 23px; color: var(--accent); text-decoration: none; font-size: 16px; }
+.maker-btn small { font-family: 'Plex Mono', monospace; font-size: 12px; color: var(--muted); }
+.maker-btn:hover, .maker-btn:focus-visible { background: var(--accent); color: var(--bg); }
+.maker-btn:hover small, .maker-btn:focus-visible small { color: var(--bg); }
+
 /* tonight in the house */
 .tonight-in { max-width: 390px; margin: 0 auto 18px; padding: 0 28px; }
 .ti-head { padding-bottom: 8px; border-bottom: 1px solid var(--line-strong); letter-spacing: .28em; }
@@ -70,6 +79,8 @@
   .dir-tools a { display: flex; align-items: center; gap: 12px; min-height: 38px; text-decoration: none; border-bottom: 1px dotted var(--line-strong); color: var(--ink); font-size: 16px; }
   .dir-tools a .glyph { color: #cfc8b2; }
   .dir-tools a:hover { color: var(--accent); }
+  .maker { grid-column: 1 / -1; max-width: none; margin: 34px 0 0; padding: 0; flex-direction: row; justify-content: space-between; text-align: left; border-top: 1px solid var(--line-strong); padding-top: 16px; }
+  .maker-line { border-top: 0; padding-top: 0; width: auto; }
   .promises { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px 30px; margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--line-strong); font-style: italic; font-size: 14px; color: var(--muted); }
   .promises span { display: flex; align-items: center; gap: 7px; }
 }

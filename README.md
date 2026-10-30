@@ -28,6 +28,10 @@ Open the folder and double-click **index.html**. Everything works straight from 
 4. Open **Settings › Pages**. Under *Branch*, choose `main` and `/ (root)`, then **Save**.
 5. Wait a minute or two. Your house is at `https://YOUR-NAME.github.io/small-hours/`.
 
+## Made by
+
+Small Hours was made by **Ishak**. Write to me on Telegram: [@Isko_ooo](https://t.me/Isko_ooo)
+
 ## Made with
 
 Astronomy Engine (MIT) · Adhan prayer times (MIT) · d3-celestial star data (BSD-3) · GeoNames cities (CC BY 4.0) · world-atlas outlines (ISC) · Radio Browser directory · real sound recordings under free licences (see the Plan of the house) · fonts under the SIL Open Font License. Scenes, music and icons are made by code.
