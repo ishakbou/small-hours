@@ -14,7 +14,7 @@ A house for the late part of the night. Seven rooms of small, free tools: the re
 
 Outside the house a quiet night plays; it stops when you walk into a room. What you play stays in its room unless you press **Follow me**. On a computer, two rooms can sit side by side (the **Two rooms** button in the player bar).
 
-Free, no account, nothing tracked. Everything is saved only on the device. Works offline once opened (only the radio needs internet). Installs like an app on phones and computers.
+Free, no account, no ads, no cookies. Only an anonymous count of visits (GoatCounter); nothing about you. Everything is saved only on the device. Works offline once opened (only the radio needs internet). Installs like an app on phones and computers.
 
 ## Use it on this computer
 
