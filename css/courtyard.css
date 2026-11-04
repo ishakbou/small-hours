@@ -133,3 +133,24 @@ body.room-courtyard { background: #f4efe4; }
 .newmoon:empty { display: none; }
 .newmoon b { font-weight: 500; }
 .newmoon .glyph { color: #1d5c63; flex: 0 0 auto; margin-top: 2px; }
+
+/* the gentle reminder */
+.rem { max-width: 520px; margin: 22px auto 0; display: flex; flex-direction: column; gap: 10px; }
+.rem-orn { display: flex; align-items: center; gap: 12px; color: var(--accent); } .rem-orn span { flex: 1; height: 1px; background: var(--ink); }
+.rem-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.rem-top h2 { margin: 0; font-family: 'Garamond', serif; font-weight: 400; font-size: 24px; color: var(--ink); }
+.rem-sub { margin: 0; font-style: italic; font-size: 15px; color: var(--muted); }
+.rem-sw { flex: 0 0 56px; width: 56px; height: 32px; border-radius: 16px; border: 1.5px solid var(--ink); background: transparent; position: relative; cursor: pointer; padding: 0; }
+.rem-sw span { position: absolute; left: 3px; top: 3px; width: 23px; height: 23px; border-radius: 50%; background: var(--ink); transition: left .2s; }
+.rem-sw[aria-checked="true"] { background: var(--ink); } .rem-sw[aria-checked="true"] span { left: 27px; background: var(--bg); }
+.rem-sw:focus-visible, .rem-grid button:focus-visible, .rem-hear:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.rem-body[aria-disabled="true"] { opacity: .5; }
+.rem-k { margin-top: 4px; font-family: 'Goudy', serif; font-size: 12px; letter-spacing: .18em; color: var(--muted); }
+.rem-grid { display: grid; gap: 6px; } .rem-grid.g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } .rem-grid.g5 { grid-template-columns: repeat(5, minmax(0, 1fr)); } .rem-grid.g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.rem-grid button { min-height: 48px; border: 1px solid var(--line-strong); border-color: rgba(29,59,63,.4); background: transparent; color: var(--ink); font-family: 'Garamond', serif; font-size: 15px; line-height: 1.1; cursor: pointer; padding: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.rem-grid button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.rem-grid.g2 button { font-size: 16px; } .rem-grid.g2 button[aria-pressed="true"] { background: rgba(180,99,43,.12); color: var(--ink); border-color: var(--accent); }
+.rem-grid .ar { font-size: 17px; }
+.rem-hear { align-self: flex-start; min-height: 44px; padding: 0 16px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font-family: 'Garamond', serif; font-size: 16px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+.rem-note { margin: 0; font-style: italic; font-size: 14px; color: var(--muted); }
+.rem-hear[hidden] { display: none; }

@@ -32,9 +32,10 @@
 .w-btn { flex: 1 1 0; min-height: 46px; border: 1px solid rgba(236,230,214,.45); background: transparent; color: var(--bone); font-family: 'Fell SC', serif; font-size: 14px; letter-spacing: .08em; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
 .w-btn.solid { background: var(--bone); color: #0b0d0c; border-color: var(--bone); }
 .w-done-note { display: flex; gap: 12px; align-items: flex-start; font-style: italic; font-size: 28px; line-height: 1.12; }
-.w-scenes { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+.w-scenes { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 6px; }
 .w-scenes button { display: flex; flex-direction: column; align-items: center; gap: 6px; border: 0; background: none; color: var(--soft); cursor: pointer; padding: 0; font-size: 12px; }
 .w-scenes .ring { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid rgba(236,230,214,.28); display: flex; align-items: center; justify-content: center; background: rgba(7,9,10,.2); color: var(--bone); }
+@media (max-width: 600px) { .w-scenes { gap: 2px; } .w-scenes button { font-size: 11px; gap: 5px; } .w-scenes .ring { width: 40px; height: 40px; } .w-scenes .ring svg { width: 20px; height: 20px; } }
 .w-scenes button[aria-pressed="true"] .ring { border-color: var(--bone); background: rgba(236,230,214,.16); }
 .blink { position: fixed; inset: 0; border: 8px solid var(--bone); background: rgba(236,230,214,.13); animation: wblink .9s ease-in-out infinite alternate; pointer-events: none; z-index: 2; }
 @keyframes wblink { from { opacity: 1; } to { opacity: .1; } }
