@@ -33,11 +33,21 @@
         <div class="d-row">
           <button type="button" class="pen-btn" data-gd-pause>pause</button>
           <button type="button" class="pen-btn red" data-gd-quit>give up</button>
-          <span class="pen-aside">(the plant<br>will wilt)</span>
+          <span class="pen-aside" data-gd-aside>(the plant<br>will wilt)</span>
         </div>
       </div>
-      <figure class="garden" aria-label="This week's garden" data-garden></figure>
-      <div class="pen-line" data-gd-sum></div>
+      <div class="gd-done" data-gd-done hidden></div>
+      <section class="streak" data-gd-streak aria-label="Your study streak"></section>
+      <section class="gd-week" data-gd-week aria-labelledby="gd-week">
+        <div class="wk-head" data-gd-whead></div>
+        <div data-gd-total></div>
+        <div class="bars" data-gd-bars></div>
+        <div class="gd-subj" data-gd-subj></div>
+        <div class="wk-head gh"><h2 class="d-lbl">THE GARDEN · ONE BED A DAY</h2><span><button type="button" class="wk-arrow" data-gd-prev aria-label="The week before">‹</button><button type="button" class="wk-arrow" data-gd-next aria-label="The week after">›</button></span></div>
+        <figure class="garden" aria-label="The garden for this week" data-garden></figure>
+        <div class="pen-line" data-gd-sum></div>
+        <p class="d-small legend">small plant 15–25 min · tall flower 45–50 min · grey: given up</p>
+      </section>
       <div class="sticky" data-next-exam hidden></div>
     </section>
 
