@@ -13,19 +13,46 @@
   .plan { max-width: 1100px; margin: 0 auto; padding: 0 22px 60px; }
   .plan h1 { margin: 8px 0 0; font-weight: 400; font-size: 40px; line-height: 1.05; }
   .plan .sub { font-style: italic; color: var(--muted); margin: 6px 0 0; }
-  .key { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 14px; font-size: 14px; }
-  .key span { display: flex; gap: 6px; align-items: center; }
-  .open-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); display: inline-block; }
-  .soon-dot { width: 9px; height: 9px; border-radius: 50%; border: 1px solid var(--muted); display: inline-block; }
-  .rooms-plan { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0; margin-top: 22px; border-top: 1.5px solid var(--ink); }
-  .rp { padding: 16px 16px 16px 0; border-bottom: .5px solid var(--ink); }
-  .rp h2 { display: flex; align-items: center; gap: 10px; margin: 0; font-weight: 400; font-size: 22px; }
-  .rp h2 .glyph { color: var(--accent); }
-  .rp .what { font-style: italic; font-size: 14px; color: var(--muted); margin: 2px 0 10px 40px; }
-  .rp ul { list-style: none; margin: 0; padding: 0; }
-  .rp li a, .rp li span.t { display: flex; align-items: center; gap: 9px; min-height: 34px; text-decoration: none; font-size: 15px; }
-  .rp li .soon { color: var(--muted); }
-  .rp li .state { margin-left: auto; }
+  .fp { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-top: 14px; }
+  .floors { display: flex; flex-direction: column; gap: 4px; }
+  .floors svg { display: block; width: 100%; max-width: 520px; height: auto; overflow: visible; }
+  .floors .tb svg { width: 22px; height: 22px; flex: 0 0 22px; }
+  .floors .hit { fill: transparent; cursor: pointer; outline: none; }
+  .floors .hit:focus-visible { stroke: var(--accent); stroke-width: 2; stroke-dasharray: 4 3; }
+  .floors .tint { fill: var(--accent); fill-opacity: 0; transition: fill-opacity .2s; pointer-events: none; }
+  .floors .tint.on { fill-opacity: .14; }
+  .floors .lbl { pointer-events: none; transition: fill .2s; }
+  .floors .lbl.on { fill: var(--accent); }
+  .floors .roofchip { cursor: pointer; }
+  .floors .roofchip.on rect { fill: var(--accent); } .floors .roofchip.on text { fill: var(--bg); }
+  .rc { background: var(--panel); border: 1px solid var(--ink); padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+  .rc .k { font-family: var(--f-label); font-size: 12px; letter-spacing: .18em; color: var(--accent); }
+  .rc h2 { margin: 0; font-weight: 400; font-size: 26px; line-height: 1.1; }
+  .rc .what { font-style: italic; font-size: 14px; color: var(--muted); margin: 0 0 4px; }
+  .rc ul { list-style: none; margin: 0; padding: 0; }
+  .rc li a, .rc li span.t { display: flex; align-items: center; gap: 10px; min-height: 42px; border-bottom: 1px solid var(--line); text-decoration: none; font-size: 16px; color: var(--ink); }
+  .rc li:last-child a, .rc li:last-child span.t { border-bottom: 0; }
+  .rc li .glyph { color: var(--accent); }
+  .rc li .arr { margin-left: auto; color: var(--muted); }
+  .rc li .soon { color: var(--muted); }
+  .rc .go { margin-top: 8px; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 18px; background: var(--ink); color: var(--bg); text-decoration: none; font-family: var(--f-label); letter-spacing: .12em; font-size: 14px; }
+  .chips { display: none; }
+  .tb { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--ink); padding-top: 6px; margin-top: 4px; font-family: var(--f-label); font-size: 11px; letter-spacing: .16em; color: var(--muted); }
+  @media (min-width: 900px) {
+    .plan h1 { font-size: 44px; }
+    .fp { grid-template-columns: minmax(0, 1fr) 320px; gap: 36px; align-items: start; }
+    .floors { border: 1px solid var(--ink); background: rgba(255,255,255,.18); padding: 16px 20px 10px; }
+    .floors .pair { display: flex; gap: 24px; align-items: flex-start; }
+    .floors .pair svg { flex: 1 1 0; min-width: 0; }
+    .floors .pair svg:first-child { flex-grow: 1.15; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; font-family: var(--f-label); font-size: 12px; letter-spacing: .14em; }
+    .chips button { font: inherit; letter-spacing: inherit; color: var(--ink); background: transparent; border: 1px solid var(--line-strong); padding: 6px 10px; min-height: 34px; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+    .rc { background: transparent; border: 0; padding: 0; }
+    .rc h2 { font-size: 36px; }
+    .rc ul { border-top: 1px solid var(--ink); }
+    .rc li a, .rc li span.t { min-height: 46px; font-size: 18px; border-bottom: 1px solid var(--line); }
+  }
   .notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 30px; padding-top: 16px; border-top: 1.5px solid var(--ink); }
   .notes h3 { margin: 0 0 8px; font-family: 'Fell SC', serif; font-weight: 400; font-size: 13px; letter-spacing: .2em; color: var(--accent); text-transform: uppercase; }
   .notes p, .notes li { font-size: 15px; line-height: 1.5; margin: 0 0 6px; }
@@ -38,9 +65,8 @@
 <main class="plan">
   <div class="topbar"><a class="room-title" href="house.html"><i data-glyph="back" data-size="18"></i>The House</a></div>
   <h1>The Plan of the House</h1>
-  <p class="sub">Seven rooms of small tools for the late part of the night.</p>
-  <div class="key"><span><i class="open-dot"></i>open now</span><span><i class="soon-dot"></i>still being built</span></div>
-  <div class="rooms-plan" data-plan></div>
+  <p class="sub" data-hint>Seven rooms on two floors and a roof. Tap a room.</p>
+  <div class="fp" data-plan></div>
   <div class="notes">
     <div>
       <h3>In every room</h3>
